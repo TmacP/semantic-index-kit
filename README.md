@@ -7,7 +7,7 @@ Comes with an interactive **curses TUI** that lets you see staleness at a glance
 ```
   Semantic Index — Ollama Updater
   ───────────────────────────────
-  Feeds source files to local gemma3:12b, writes SEMANTIC_INDEX/ entries.
+  Feeds source files to local gemma4:e2b, writes SEMANTIC_INDEX/ entries.
   Stale/missing files are pre-selected. Toggle with Space, Enter to run.
 
  ─── api/ ───
@@ -50,7 +50,7 @@ When modifying the main update cycle or adding new subsystems.
 - **[Ollama](https://ollama.com)** running locally with a model pulled:
   ```bash
   # Install Ollama, then pull a model:
-  ollama pull gemma3:12b     # recommended default
+  ollama pull gemma4:e2b     # recommended default
   # or: ollama pull llama3.2, qwen2.5, etc.
   ```
 
@@ -88,7 +88,7 @@ SKIP_PATTERNS = []  # e.g., ["vendor/", "node_modules/", "generated/"]
 
 ### 3. Choose your model
 
-Default is `gemma3:12b`. Override via environment variable:
+Default is `gemma4:e2b`. Override via environment variable:
 
 ```bash
 export OLLAMA_MODEL=llama3.2
@@ -147,7 +147,7 @@ python3 update_index.py src/api/routes.py src/core/engine.py
 | Variable | Default | Description |
 |----------|---------|-------------|
 | `OLLAMA_URL` | `http://localhost:11434/api/generate` | Ollama API endpoint |
-| `OLLAMA_MODEL` | `gemma3:12b` | Model name |
+| `OLLAMA_MODEL` | `gemma4:e2b` | Model name |
 | `INDEX_TIMEOUT` | `180` | Timeout per model call (seconds) |
 
 ## Using with Claude Code (or other AI agents)

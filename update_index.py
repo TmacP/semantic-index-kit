@@ -47,7 +47,7 @@ INDEX_DIR = os.path.join(PROJECT_ROOT, "SEMANTIC_INDEX")
 OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434/api/generate")
 
 # Model to use — override with OLLAMA_MODEL env var
-OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "gemma3:12b")
+OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "gemma4:e2b")
 
 # Timeout per model call (seconds)
 TIMEOUT = int(os.environ.get("INDEX_TIMEOUT", "180"))
